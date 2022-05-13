@@ -1,37 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- <html lang="en"> -->
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+
   <title>Frontend Mentor | Order summary card</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+
 </head>
 <body>
 
-  Order Summary
+  <section class="card">
+    <img src="images/illustration-hero.svg" alt="illustration-hero">
+    <div class="subhero">
+      <h1>Order Summary</h1>
+      
+      <p>You can now listen to millions of songs, audiobooks, and podcasts on any 
+        device anywhere you like!</p>
+    </div>
 
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
+    <section class="plan">
+      <div class="planleft">
+        <div class="icon">
+          <img src="images/icon-music.svg" alt="icon-music">
+        </div>
+        <div class="prices">
+          <h2>Annual Plan</h2>
+          <p>$59.99/year</p>
+        </div>
+      </div>
+      <div class="change">
+        <a href="http://">Change</a>
+      </div>
+    </section>
 
-  Annual Plan
-  $59.99/year
-
-  Change
-
-  Proceed to Payment
-  Cancel Order
-  
-  <div class="attribution">
+    <section class="cta">
+      <div class="pay">
+       <button class="button">Proceed to Payment</button> 
+      </div>  
+      <div class="cancel">
+        <a href="">Cancel Order</a>
+        <!-- <p>Cancel Order</p> -->
+      </div>
+    </section>
+  </section>
+    
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
 </html>
