@@ -1,14 +1,10 @@
 body {
     background-color: hsl(225, 100%, 98%);
-    /* background-color:  hsl(224, 23%, 55%); */
-    /* background-color:  hsl(245, 75%, 52%); */
     background-image: url(images/pattern-background-mobile.svg);
     background-size: contain;
     background-repeat: no-repeat;
     /* background-size: 1440px; */
     font-family: 'Red Hat Display', sans-serif;
-    /* font-size: 100%; */
-    /* line-height: 1; */
     margin: 0;
     padding: 0;
 }
@@ -36,13 +32,14 @@ section img{
 .card .subhero p{
     padding: 0 3em;
     line-height: 1.6em;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 .card .plan{
     display: flex;
     flex-direction: row;
     align-items:center;
     justify-content: space-between;
+    flex-wrap: wrap;
     /* margin-top: 2.5rem; */
     background-color: hsl(225, 100%, 98%);
     border-radius: 1rem;
@@ -54,27 +51,44 @@ section img{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     text-align: left;
-    line-height: .7em;
+    /* line-height: .7em; */
     /* margin-left: 1em; */
+    /* border: 1px solid violet; */
 
 }
-.card .plan .planleft h2{
+.card .plan .planleft .prices{
+    /* border: 1px solid red; */
+    margin-left: 1rem;
+    line-height: .2em;
+}
+.card .plan .planleft .prices h2{
     font-size: 1.1em;
     font-weight: 900;
+    line-height: normal;
 
 }
-.card .plan .planleft .icon img{
+.card .plan .planleft img{
     width: 50px;
-    margin-top: .7rem;
-    margin-right: 1.5rem;
+    height: 50px;
+    /* margin-top: .7rem; */
+    /* margin-right: 1.5rem; */
+    margin: auto;
+    /* border: 1px solid black; */
+
 }
 
-.card .plan .change a:link{
+.card .plan a:link{
     font-weight: 700;
     color: hsl(245, 75%, 52%);
+    align-items: center;
+    justify-content: space-around;
+    /* margin: auto; */
+    /* padding-bottom: 10px; */
 }
-.card .plan .change a:hover{
+.card .plan a:hover{
     text-decoration: none;
     color: hsl(224, 23%, 55%);
 }
@@ -84,37 +98,47 @@ section img{
     flex-direction: column;
     /* align-items: center; */
     /* justify-content: center; */
-    width: 360px;
+    /* min-width: 360px; */
     font-weight: 700;
-    margin: 45px auto;
- 
+    margin: 45px 50px;
 }   
 
-.card .cta .pay button{
+.card .cta button{
     background-color: hsl(245, 75%, 52%);
     color: white;
     border-radius: 1rem;
     padding: 1rem;
     font-weight: 700;
     border: none;
-    display: inline-block;
+    display: block;
     font-size: 16px;
-    width: 360px;
-    margin-bottom: 2rem;
+    /* max-width: 100%; */
+    min-width: 100%;
+    margin: 0 auto 2rem auto;
     box-shadow: 0px 10px 10px rgba(128, 128, 128, 0.2);
 }
-.card .cta .pay button:hover{
+.card .cta button:hover{
     background-color: hsl(224, 23%, 55%);
 }
 
-.card .cta .cancel a{
+.card .cta a{
     margin-top: 2rem;
     color: hsl(224, 23%, 55%);
     text-decoration: none;
 
 }
-.card .cta .cancel a:hover{
+.card .cta a:hover{
     color: black;
     /* color: hsl(224, 23%, 55%); */
 
+}
+@media screen and (max-width: 375px) {
+    .card {
+        margin: auto 10px;
+        background-color: brown;
+    }
+    .card .plan a:link{
+        margin: auto;
+        padding-bottom: 10px;
+    }
 }
