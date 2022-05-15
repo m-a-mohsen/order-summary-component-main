@@ -1,9 +1,20 @@
+:root{
+    /* Primary */
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    /* Neutral */
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+
+    --Shadow :rgba(128, 128, 128, 0.1);
+}
+
 body {
-    background-color: hsl(225, 100%, 98%);
+    background-color: var(--Pale-blue);
     background-image: url(images/pattern-background-mobile.svg);
     background-size: contain;
     background-repeat: no-repeat;
-    /* background-size: 1440px; */
     font-family: 'Red Hat Display', sans-serif;
     margin: 0;
     padding: 0;
@@ -17,7 +28,7 @@ section.card {
     max-width: 460px;
     border-radius: 1rem;
     margin: 2em auto;
-    box-shadow: 10px 10px 10px rgba(128, 128, 128, 0.1);
+    box-shadow: 10px 10px 10px var(--Shadow);
 }
 section img{
     border-radius: 1rem 1rem 0 0;
@@ -40,8 +51,7 @@ section img{
     align-items:center;
     justify-content: space-between;
     flex-wrap: wrap;
-    /* margin-top: 2.5rem; */
-    background-color: hsl(225, 100%, 98%);
+    background-color: var(--Very-pale-blue);
     border-radius: 1rem;
     margin: 0 50px ;
     padding: 5px 20px;
@@ -54,13 +64,8 @@ section img{
     align-items: center;
     flex-wrap: wrap;
     text-align: left;
-    /* line-height: .7em; */
-    /* margin-left: 1em; */
-    /* border: 1px solid violet; */
-
 }
 .card .plan .planleft .prices{
-    /* border: 1px solid red; */
     margin-left: 1rem;
     line-height: .2em;
 }
@@ -73,38 +78,31 @@ section img{
 .card .plan .planleft img{
     width: 50px;
     height: 50px;
-    /* margin-top: .7rem; */
-    /* margin-right: 1.5rem; */
     margin: auto;
-    /* border: 1px solid black; */
-
 }
 
 .card .plan a:link{
     font-weight: 700;
-    color: hsl(245, 75%, 52%);
+    color: var(--Bright-blue);
     align-items: center;
     justify-content: space-around;
-    /* margin: auto; */
-    /* padding-bottom: 10px; */
+}
+.card .plan a:visited{
+    color: var(--Bright-blue);
 }
 .card .plan a:hover{
     text-decoration: none;
-    color: hsl(224, 23%, 55%);
+    color: var(--Desaturated-blue);
 }
 
 .card .cta{
-    /* display: flex; */
     flex-direction: column;
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* min-width: 360px; */
     font-weight: 700;
     margin: 45px 50px;
 }   
 
 .card .cta button{
-    background-color: hsl(245, 75%, 52%);
+    background-color: var(--Bright-blue);
     color: white;
     border-radius: 1rem;
     padding: 1rem;
@@ -112,30 +110,28 @@ section img{
     border: none;
     display: block;
     font-size: 16px;
-    /* max-width: 100%; */
     min-width: 100%;
     margin: 0 auto 2rem auto;
-    box-shadow: 0px 10px 10px rgba(128, 128, 128, 0.2);
+    box-shadow: 0px 10px 10px var(--Shadow);
 }
 .card .cta button:hover{
-    background-color: hsl(224, 23%, 55%);
+    background-color: var(--Desaturated-blue);
 }
 
 .card .cta a{
     margin-top: 2rem;
-    color: hsl(224, 23%, 55%);
+    color: var(--Desaturated-blue);
     text-decoration: none;
 
 }
 .card .cta a:hover{
-    color: black;
-    /* color: hsl(224, 23%, 55%); */
+    color: var(--Dark-blue);
+    
 
 }
 @media screen and (max-width: 375px) {
     .card {
         margin: auto 10px;
-        background-color: brown;
     }
     .card .plan a:link{
         margin: auto;
